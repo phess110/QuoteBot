@@ -46,6 +46,21 @@ def search(filename, tit):
 #Declaring bot looking for ! commands
 bot = commands.Bot(command_prefix=".")
 
+@bot.command(name='rename')
+async def rename(ctx,oldtit, newtit):
+    with open(qf) as f:
+        data = json.load(f)
+    r = ''
+    try:
+        r = data[oldtit]
+        data[newtit] = r
+        del data[oldtit]
+        with open(qf, 'w') as f:
+            json.dump(data,f)
+    except:
+        r ="No quote found with that title."
+    await ctx.channel.send(str(r))
+
 #List all quotes
 @bot.command(name='all')
 async def all(ctx):

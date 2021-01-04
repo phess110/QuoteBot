@@ -4,6 +4,8 @@ import json
 from json import JSONDecodeError
 import os
 
+token = os.getenv("DISCORD_BOT_TOKEN")
+
 #XXX TODO:
 # 1.) (Change Prefix?) Unique prefix. What happens when multiple bots are on the
 #       server and a user types !help?
@@ -131,4 +133,4 @@ async def on_reaction_add(reaction,user):
 
 
 #insert your discord bot token here.
-bot.run('')
+bot.run(token)

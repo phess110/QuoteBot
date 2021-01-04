@@ -131,6 +131,5 @@ async def on_reaction_add(reaction,user):
         page_count += 1
         await reaction.message.edit(content=pages[page_count % len(pages)])
 
-
 #insert your discord bot token here.
 bot.run(token)

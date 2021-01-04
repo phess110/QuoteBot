@@ -131,4 +131,4 @@ async def on_reaction_add(reaction,user):
 
 
 #insert your discord bot token here.
-bot.run('NzkzMjEwNTkxNDgwNTEyNTIy.X-o87g.q7WpAVRv7F1zuhw-CdQ3IcHpFrA')
+bot.run('')
